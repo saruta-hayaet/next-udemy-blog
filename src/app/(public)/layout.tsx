@@ -12,8 +12,9 @@ export default function PublicLayout({
   children: React.ReactNode;
 }>) {
   return (
-	<PublicHeader>
-		{children}
-	</PublicHeader>
+		<>
+			<PublicHeader />
+			{children}
+		</>
   );
 }

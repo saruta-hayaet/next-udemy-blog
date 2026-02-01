@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import SearchBox from '@/components/post/SearchBox';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu'
 
 export default function PublicHeader() {
@@ -11,16 +11,14 @@ export default function PublicHeader() {
 					<NavigationMenu>
 						<NavigationMenuList>
 							<NavigationMenuItem>
-								<Link href="/" legacyBehavior passHref>
-									<NavigationMenuLink className="font-bold text-xl">
-										BLOG
-									</NavigationMenuLink>
+								<Link href="/" passHref>
+									BLOG
 								</Link>
 							</NavigationMenuItem>
 						</NavigationMenuList>
 					</NavigationMenu>
 					<div className="flex itmes-center gap-4">
-						<Input type="search" placeholder="記事を検索" className="w-[200px] lg:w-[300px]" />
+						<SearchBox />
 						<Button variant="outline" asChild>
 							<Link href="/login">ログイン</Link>
 						</Button>
@@ -30,6 +28,6 @@ export default function PublicHeader() {
 					</div>
 				</div>
 			</header>
-		</div>
-	)
+			</div>
+    );
 }
