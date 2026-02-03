@@ -12,9 +12,9 @@ import { useActionState } from 'react';
 import { createUser } from "@/lib/actions/createUser";
 
 export default function RegisterForm() {
-    const [state, formAction] = useActionState(createUser, {
-        success: false, errors: {}
-    })
+	const [state, formAction] = useActionState(createUser, {
+			success: false, errors: {}
+	})
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
